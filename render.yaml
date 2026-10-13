@@ -3,7 +3,6 @@ services:
     name: upright
     runtime: docker
     plan: starter
-    healthCheckPath: /
     envVars:
       - key: APP_PASSWORD
         sync: false
