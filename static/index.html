@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Upright</title>
+  <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="top">
+    <h1 class="brand cond"><span class="mark" aria-hidden="true"></span>Upright</h1>
+    <p id="slots" class="slots" aria-live="polite">Not recording</p>
+  </header>
+
+  <main>
+    <form id="rec-form" class="cmd" autocomplete="off">
+      <label class="cmd-field">
+        <span class="at cond" aria-hidden="true">@</span>
+        <input id="username" name="username" type="text" autocapitalize="none" spellcheck="false"
+               placeholder="username" aria-label="TikTok username" maxlength="120" required>
+      </label>
+      <div class="cmd-actions">
+        <button type="submit" id="btn-rec" class="btn btn-rec">Record</button>
+        <button type="button" id="btn-check" class="btn">Check only</button>
+      </div>
+      <p class="hint">Records the vertical picture only. If the streamer uses dual layout, you still get the portrait view.</p>
+    </form>
+
+    <p id="offline" class="offline" role="alert" hidden>Lost connection to the app. It may have stopped. Retrying…</p>
+    <ul id="notices" class="notices" aria-live="polite"></ul>
+    <section id="check-result" class="check-slot" aria-live="polite"></section>
+
+    <section aria-labelledby="h-now">
+      <h2 id="h-now" class="cond">Recording now</h2>
+      <div id="stage" class="stage">
+        <article id="ghost" class="frame ghost">
+          <div class="viewfinder">
+            <div class="screen"><p>Nothing recording. Enter a username above to start.</p></div>
+            <span class="marks" aria-hidden="true"></span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="h-lib">
+      <h2 id="h-lib" class="cond">Recordings</h2>
+      <ul id="library" class="library"></ul>
+    </section>
+  </main>
+
+  <dialog id="player" aria-labelledby="player-title">
+    <div class="player-bar">
+      <p id="player-title" class="cond"></p>
+      <form method="dialog"><button class="btn" aria-label="Close player">Close</button></form>
+    </div>
+    <video controls playsinline></video>
+  </dialog>
+
+  <script src="/static/app.js" defer></script>
+</body>
+</html>
