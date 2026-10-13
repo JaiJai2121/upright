@@ -1,0 +1,40 @@
+UPRIGHT — PUT IT ONLINE (NO PYTHON OR COMMANDS ON YOUR PC)
+
+This is the real Upright web app, including its backend and FFmpeg setup for a Docker host.
+It cannot work as a static-only website because recording TikTok LIVE streams needs a server.
+
+YOU WILL NEED
+- A GitHub account (to store the project files)
+- A Render account (to run the website)
+- A Render plan that supports a persistent disk. Check current pricing before confirming.
+
+STEP 1 — CREATE A GITHUB REPOSITORY
+1. Open https://github.com/new
+2. Name it upright
+3. Choose Private
+4. Click Create repository
+
+STEP 2 — UPLOAD THE PROJECT FILES IN YOUR BROWSER
+1. On the new repository page, choose Add file → Upload files.
+2. Open this ZIP on your computer and open the folder inside it.
+3. Drag the CONTENTS of this folder (not the folder itself) onto GitHub's upload page.
+   Make sure render.yaml and Dockerfile are visible at the repository's top level.
+4. Click Commit changes.
+
+STEP 3 — DEPLOY ON RENDER
+1. Open https://dashboard.render.com/blueprints
+2. Choose New Blueprint Instance / connect a repository (wording may vary).
+3. Connect GitHub if asked, then select the private `upright` repository.
+4. Render should detect render.yaml. Review the service and disk costs before deploying.
+5. When asked for APP_PASSWORD, enter a strong, unique password. Do not share it.
+6. Start the deployment and wait for the build to finish.
+
+STEP 4 — OPEN YOUR SITE
+Render will give you an address ending in onrender.com. Open it in your browser.
+Sign in using any username and the APP_PASSWORD you set in Step 3.
+
+IMPORTANT
+- I have prepared the deployable project, but I cannot publish it inside your GitHub/Render accounts from this chat.
+- Hosting and persistent disk may cost money; check the price shown by Render before confirming.
+- This uses unofficial TikTok endpoints, which may change or be blocked. Record only streams you have permission to record and follow applicable terms and laws.
+- Do not put APP_PASSWORD or TikTok session cookies into public code or a public repository.

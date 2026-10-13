@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: upright
+    runtime: docker
+    plan: starter
+    healthCheckPath: /
+    envVars:
+      - key: APP_PASSWORD
+        sync: false
+      - key: HOST
+        value: 0.0.0.0
+      - key: PORT
+        value: 8000
+      - key: RECORD_DIR
+        value: /data/recordings
+    disk:
+      name: upright-recordings
+      mountPath: /data
+      sizeGB: 10

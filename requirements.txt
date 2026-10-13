@@ -1,0 +1,4 @@
+starlette>=0.40
+uvicorn>=0.30
+curl_cffi>=0.7
+python-dotenv>=1.0

@@ -1,0 +1,16 @@
+UPRIGHT — LOCAL WINDOWS SETUP
+
+1. Install Python 3.10 or newer: https://www.python.org/downloads/windows/
+   During setup, enable “Add Python to PATH”.
+2. Install FFmpeg: https://ffmpeg.org/download.html
+   Make sure both ffmpeg and ffprobe are available in PATH.
+3. Extract this entire ZIP to a normal folder, such as Desktop\Upright.
+4. Double-click START-UPRIGHT.bat. The first run installs the app's Python packages and may take a few minutes.
+5. Open http://localhost:8000 in your browser. If it did not open automatically, enter that address yourself.
+6. Keep the black command window open while using Upright. Close it with Ctrl+C when finished.
+
+Recordings are saved in the recordings folder inside this project.
+
+This setup listens only on your own PC (127.0.0.1). Do not change HOST to 0.0.0.0 unless you intend to allow other devices to access it and have set a strong APP_PASSWORD in a .env file.
+
+The app uses unofficial TikTok endpoints, which can change or be blocked. Only record streams when you have permission and follow applicable terms and laws.

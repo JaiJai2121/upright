@@ -1,0 +1,6 @@
+.env
+recordings
+demo-recordings
+debug
+__pycache__
+*.pyc
